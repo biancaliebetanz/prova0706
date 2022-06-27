@@ -8,7 +8,7 @@ const con = await mysql.createConnection({
 
     typeCast: function (field, next) {
         if (field.type === 'TINY' && field.length === 1){
-            return (field.string() === 1);
+            return (field.string() === '1');
         } else {
             return next();
         }

@@ -4,7 +4,7 @@ import { inserirSuperHeroi, listarSuperHeroi } from "../repository/superheroirep
 
 const server= Router();
 
-server.post('/inserir', async (req, resp) => {
+server.post('/superheroi', async (req, resp) => {
     
     try {
         const superheroiparainserir = req.body;
@@ -17,7 +17,7 @@ server.post('/inserir', async (req, resp) => {
     
 })
 
-server.get('/listar', async (req, resp) => {
+server.get('/superheroi', async (req, resp) => {
     try {
         const [resposta] = await listarSuperHeroi();
         resp.send(resposta);
